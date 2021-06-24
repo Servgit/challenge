@@ -105,17 +105,13 @@ public class MicrosoftProductSteps {
     public void Go_to_next_to_the_shopping_cart() {
         driver.findElement(By.xpath("//*[@id=\"search\"]")).click();
         System.out.println("**__Search button has been selected__**");
-        
-
     }
 
     @Then("Search for Visual studio")
     public void Search_for_visual_studio() {
         String testData = testProperties.testData("PRODUCT_SEARCH");
-
         WebElement search =  driver.findElement(By.xpath("//*[@id=\"cli_shellHeaderSearchInput\"]"));
         search.click();
-        //search.sendKeys("visual studio");
         search.sendKeys(testData);
         driver.findElement(By.xpath("//*[@id=\"search\"]")).click();
         System.out.println("**__Visual Studio search completed__**");
@@ -125,6 +121,7 @@ public class MicrosoftProductSteps {
     public void print_the_price_for_the_first_elements_listed_in_software_result_list() {
         boolean popUp = driver.findElement(By.xpath("//*[@id=\"R1MarketRedirect-close\"]")).isDisplayed();
         if (popUp == true){
+            
             driver.findElement(By.xpath("//*[@id=\"R1MarketRedirect-close\"]")).click();
         }
 
