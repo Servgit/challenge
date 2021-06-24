@@ -1,0 +1,209 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-06-24T07:35:10.273Z",
+        "line": 4,
+        "name": "Microsoft product price validations over Microsoft website",
+        "description": "",
+        "id": "microsoft-product-prices-in-website;microsoft-product-price-validations-over-microsoft-website",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1990000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Launch the browser",
+            "match": {
+              "location": "stepDefinitions.MicrosoftProductSteps.launch_the_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11556000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Go to Microsoft website homepage",
+            "match": {
+              "location": "stepDefinitions.MicrosoftProductSteps.go_to_microsoft_website_homepage()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 331000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate all the menu items are present",
+            "match": {
+              "location": "stepDefinitions.MicrosoftProductSteps.validate_all_the_menu_items_are_present()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5483000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Go to Windows",
+            "match": {
+              "location": "stepDefinitions.MicrosoftProductSteps.Go_to_windows()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 220000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Click on Windows ten menu",
+            "match": {
+              "location": "stepDefinitions.MicrosoftProductSteps.Click_on_windows_ten_menu()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 218000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Print all elements in the dropdown",
+            "match": {
+              "location": "stepDefinitions.MicrosoftProductSteps.print_all_elements_in_the_dropdown()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 126000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Go to Search next to the shopping Cart",
+            "match": {
+              "location": "stepDefinitions.MicrosoftProductSteps.Go_to_next_to_the_shopping_cart()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 332000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Search for Visual studio",
+            "match": {
+              "location": "stepDefinitions.MicrosoftProductSteps.Search_for_visual_studio()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 11070000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Print the price for the three first elements listed in Software result list",
+            "match": {
+              "location": "stepDefinitions.MicrosoftProductSteps.print_the_price_for_the_first_elements_listed_in_software_result_list()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 12356000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Click on the first one to go to the details page",
+            "match": {
+              "location": "stepDefinitions.MicrosoftProductSteps.Click_on_the_first_one_to_go_to_the_details_page()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 26000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Once in the details page, validate both prices are the same",
+            "match": {
+              "location": "stepDefinitions.MicrosoftProductSteps.Once_in_the_details_page_validate_both_prices_are_the_same()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 6954000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Click Add To Cart",
+            "match": {
+              "location": "stepDefinitions.MicrosoftProductSteps.Click_add_to_cart()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 114000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Verify all three price amounts are the same",
+            "match": {
+              "location": "stepDefinitions.MicrosoftProductSteps.Verify_all_price_amounts_are_the_same()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 701000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "On the number of items dropdown select twenty and validate the Total amount is Unit Price times twenty",
+            "match": {
+              "location": "stepDefinitions.MicrosoftProductSteps.on_the_number_of_items_dropdown_select_and_validate_the_total_amount_is_unit_price()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 713000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Close browser",
+            "match": {
+              "location": "stepDefinitions.MicrosoftProductSteps.Close_browser()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@MicrosoftProductPricesValidation"
+          }
+        ]
+      }
+    ],
+    "name": "Microsoft product prices in website",
+    "description": "",
+    "id": "microsoft-product-prices-in-website",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/testCases/microsoft/TC_Microsoft_Product_Validations.feature",
+    "tags": []
+  }
+]
