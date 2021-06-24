@@ -17,7 +17,9 @@ import java.io.IOException;
 public class TestRunner {
 
     @BeforeClass
+        
     public static void beforeClass() throws IOException{
         System.setProperty("environment", "PROD");
+            
     }
 }
