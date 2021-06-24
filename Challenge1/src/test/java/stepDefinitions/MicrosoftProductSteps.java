@@ -45,38 +45,38 @@ public class MicrosoftProductSteps {
     public void validate_all_the_menu_items_are_present() {
         boolean microsoft365 = driver.findElement(By.xpath("//*[@id=\"shellmenu_0\"]")).isDisplayed();
         Assert.assertEquals(true, microsoft365);
-        System.out.println("**__Element Microsoft 365 validated__**");
+        System.out.println("**__Element Microsoft 365 was validated__**");
 
         boolean office = driver.findElement(By.xpath("//*[@id=\"shellmenu_1\"]")).isDisplayed();
         Assert.assertEquals(true, office);
-        System.out.println("**__Element Office validated__**");
+        System.out.println("**__Element Office was validated__**");
 
         boolean windows = driver.findElement(By.xpath("//*[@id=\"shellmenu_2\"]")).isDisplayed();
         Assert.assertEquals(true, windows);
-        System.out.println("**__Element Windows validated__**");
+        System.out.println("**__Element Windows was validated__**");
 
         boolean surface = driver.findElement(By.xpath("//*[@id=\"shellmenu_3\"]")).isDisplayed();
         Assert.assertEquals(true, surface);
-        System.out.println("**__Element Surface validated__**");
+        System.out.println("**__Element surface was validated__**");
 
         boolean xbox = driver.findElement(By.xpath("//*[@id=\"shellmenu_4\"]")).isDisplayed();
         Assert.assertEquals(true, xbox);
-        System.out.println("**__Element X Box validated__**");
+        System.out.println("**__Element xbox was validated__**");
 
         boolean deals = driver.findElement(By.xpath("//*[@id=\"shellmenu_5\"]")).isDisplayed();
         Assert.assertEquals(true, deals);
-        System.out.println("**__Element Deals 365 validated__**");
+        System.out.println("**__Element Deals 365 was validated__**");
 
         boolean support = driver.findElement(By.xpath("//*[@id=\"l1_support\"]")).isDisplayed();
         Assert.assertEquals(true, support);
-        System.out.println("**__Element Support validated__**");
+        System.out.println("**__Element Support was validated__**");
 
     }
 
     @Then("Go to Windows")
     public void Go_to_windows() {
         driver.findElement(By.xpath("//*[@id=\"shellmenu_2\"]")).click();
-        System.out.println("**__Clicked on Windows element__**");
+        System.out.println("**__Clicked on the Windows element__**");
         WebDriverWait wait = new WebDriverWait(driver, 8);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"c-shellmenu_54\"]")));
     }
@@ -92,12 +92,12 @@ public class MicrosoftProductSteps {
     public void print_all_elements_in_the_dropdown() {
         WebElement dropdown = driver.findElement(By.xpath("//*[@id=\"uhf-g-nav\"]/ul/li[2]/div/ul"));
         List<WebElement> listelements = dropdown.findElements(By.tagName("li"));
-        System.out.println("**__Elements have been stored in listelements__** " + listelements);
+        System.out.println("**__The Elements have been stored in listelements__** " + listelements);
 
         for (WebElement webe: listelements)
             System.out.println(webe.getText());
 
-        System.out.println("**__Elements have been printed__**");
+        System.out.println("**__The Elements have been printed__**");
         
     }
 
@@ -114,7 +114,7 @@ public class MicrosoftProductSteps {
         search.click();
         search.sendKeys(testData);
         driver.findElement(By.xpath("//*[@id=\"search\"]")).click();
-        System.out.println("**__Visual Studio search completed__**");
+        System.out.println("**__Visual Studio search was completed__**");
     }
 
     @Then("Print the price for the three first elements listed in Software result list")
@@ -136,7 +136,7 @@ public class MicrosoftProductSteps {
 
         WebElement itemPrice = pricesList.get(0);
         this.itemPrice = itemPrice.getText();
-        System.out.println("**__Prices have been printed and first price was saved:" + this.itemPrice + "__**");
+        System.out.println("**__Prices have been printed and the first price has been saved:" + this.itemPrice + "__**");
 
     }
 
@@ -146,7 +146,7 @@ public class MicrosoftProductSteps {
         WebDriverWait wait = new WebDriverWait(driver, 6);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"email-newsletter-dialog\"]/div[3]/div[2]/div[2]/h2")));
         driver.findElement(By.xpath("//*[@id=\"email-newsletter-dialog\"]/div[3]/div[1]")).click();
-        System.out.println("**__Reached product details page__**");
+        System.out.println("**__Reached the product details page__**");
     }
 
     @Then("Once in the details page, validate both prices are the same")
@@ -154,7 +154,7 @@ public class MicrosoftProductSteps {
         WebElement itemPrice = driver.findElement(By.xpath("//*/div/*[contains(@id,'productPrice_PriceContainer')]"));
         String itemPriceStr = itemPrice.getText();
         Assert.assertEquals(this.itemPrice, itemPriceStr);
-        System.out.println("**__Price comparison successful__**");
+        System.out.println("**__Price comparison was successful__**");
     }
 
     @Then("Click Add To Cart")
@@ -183,19 +183,20 @@ public class MicrosoftProductSteps {
         driver.findElement(By.xpath("//select/option[20]")).click();
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'$23')]")));
-
         List<WebElement> finalPrices = driver.findElements(By.xpath("//*//div//span[@itemprop = \"price\"]"));
         WebElement finalPrice = finalPrices.get(2);
 
+        
+        
         itemPrice = itemPrice.replaceAll("[$,]", "");
         String finalPriceStr = finalPrice.getText().replaceAll("[$,]", "");
 
         int itemPriceInt = Math.round(Float.parseFloat(itemPrice));
         int finalPriceInt = Math.round(Float.parseFloat(finalPriceStr));
-
         itemPriceInt = itemPriceInt * 20;
         Assert.assertEquals(itemPriceInt, finalPriceInt);
-        System.out.println("**__Price validated: " + itemPriceInt + " = " + finalPriceInt+"__**");
+        
+        System.out.println("**__Price validation: " + itemPriceInt + " = " + finalPriceInt+"__**");
 
     }
     @And("Close browser")
