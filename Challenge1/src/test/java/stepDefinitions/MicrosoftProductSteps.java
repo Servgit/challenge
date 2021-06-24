@@ -160,7 +160,7 @@ public class MicrosoftProductSteps {
     @Then("Click Add To Cart")
     public void Click_add_to_cart() {
         driver.findElement(By.xpath("//*[@id=\"buttonPanel_AddToCartButton\"]")).click();
-        WebDriverWait wait = new WebDriverWait(driver, 6);
+        WebDriverWait wait = new WebDriverWait(driver, 9);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"store-cart-root\"]/div/div/header/div[2]/h2")));
 
         System.out.println("**__Element added to the Shopping Cart__**");
@@ -176,12 +176,12 @@ public class MicrosoftProductSteps {
         }
 
         System.out.println("**__Final prices are correct__**");
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
     }
     @Then("On the number of items dropdown select twenty and validate the Total amount is Unit Price times twenty")
     public void on_the_number_of_items_dropdown_select_and_validate_the_total_amount_is_unit_price() {
         driver.findElement(By.xpath("//select/option[20]")).click();
-        WebDriverWait wait = new WebDriverWait(driver, 3);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'$23')]")));
 
         List<WebElement> finalPrices = driver.findElements(By.xpath("//*//div//span[@itemprop = \"price\"]"));
